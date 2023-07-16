@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
 import '@fontsource/roboto'
 import {
@@ -5,13 +7,13 @@ import {
   JBrowseCircularGenomeView,
 } from '@jbrowse/react-circular-genome-view'
 
-import assembly from '../utils/assembly'
-import tracks from '../utils/tracks'
-import defaultSession from '../utils/defaultSession'
+import assembly from './assembly'
+import tracks from './tracks'
+import defaultSession from './defaultSession'
 
 type ViewModel = ReturnType<typeof createViewState>
 
-function View() {
+export default function View() {
   const [viewState, setViewState] = useState<ViewModel>()
   const [patches, setPatches] = useState('')
   const [stateSnapshot, setStateSnapshot] = useState('')
@@ -34,17 +36,17 @@ function View() {
 
   return (
     <>
-      <h1>JBrowse 2 React Circular Genome View Demo (with create-next-app)</h1>
+      <h1>JBrowse 2 React Circular Genome View next13 demo</h1>
       <JBrowseCircularGenomeView viewState={viewState} />
       <h3>Code</h3>
       <p>
         The code for this app is available at{' '}
         <a
-          href="https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-circular-genome-view"
+          href="https://github.com/GMOD/jbrowse-react-circular-genome-view-nextjs-demo/"
           target="_blank"
           rel="noreferrer"
         >
-          https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-circular-genome-view
+          https://github.com/GMOD/jbrowse-react-circular-genome-view-nextjs-demo/
         </a>
         .
       </p>
@@ -100,5 +102,3 @@ function View() {
     </>
   )
 }
-
-export default View

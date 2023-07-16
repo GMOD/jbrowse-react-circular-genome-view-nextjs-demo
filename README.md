@@ -1,7 +1,6 @@
 # jbrowse-react-circular-genome-view-nextjs
 
-This is a demo of using the circular genome view with next.js (which uses
-webpack 5).
+This is a demo of using the circular genome view with next13 and the app router.
 
 ## Demo of `@jbrowse/react-circular-genome-view` with next.js
 
@@ -20,4 +19,4 @@ yarn dev
 ## Deploy
 
 This page is deployed to https://jbrowse.org/demos/cgv-nextjs (uses
-`yarn build && yarn export` to create static build with no server side)
+`output:export` in next.config.js to create static build with no server side)
