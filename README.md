@@ -1,6 +1,6 @@
 # jbrowse-react-circular-genome-view-nextjs
 
-This is a demo of using the circular genome view with next13 and the app router.
+This is a demo of using the circular genome view with next14 and the app router.
 
 ## Demo of `@jbrowse/react-circular-genome-view` with next.js
 

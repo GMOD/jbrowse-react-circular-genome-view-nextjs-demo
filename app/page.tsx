@@ -36,7 +36,7 @@ export default function View() {
 
   return (
     <>
-      <h1>JBrowse 2 React Circular Genome View next13 demo</h1>
+      <h1>JBrowse 2 React Circular Genome View next14 demo</h1>
       <JBrowseCircularGenomeView viewState={viewState} />
       <h3>Code</h3>
       <p>
