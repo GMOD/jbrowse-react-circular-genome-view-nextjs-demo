@@ -1,15 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import '@fontsource/roboto'
+import { useState, useEffect } from 'react'
 import {
   createViewState,
   JBrowseCircularGenomeView,
-} from '@jbrowse/react-circular-genome-view'
-
-import assembly from './assembly'
-import tracks from './tracks'
-import defaultSession from './defaultSession'
+} from '@jbrowse/react-circular-genome-view2'
+import { config } from './config'
+import '@fontsource/roboto'
 
 type ViewModel = ReturnType<typeof createViewState>
 
@@ -20,12 +17,10 @@ export default function View() {
 
   useEffect(() => {
     const state = createViewState({
-      assembly,
-      tracks,
+      ...config,
       onChange: (patch: any) => {
         setPatches(previous => previous + JSON.stringify(patch) + '\n')
       },
-      defaultSession,
     })
     setViewState(state)
   }, [])
@@ -36,7 +31,7 @@ export default function View() {
 
   return (
     <>
-      <h1>JBrowse 2 React Circular Genome View next14 demo</h1>
+      <h1>JBrowse 2 React Circular Genome View Next.js demo</h1>
       <JBrowseCircularGenomeView viewState={viewState} />
       <h3>Code</h3>
       <p>
