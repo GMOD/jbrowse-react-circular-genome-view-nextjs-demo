@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "aws s3 sync --delete out s3://jbrowse.org/demos/cgv-nextjs/",
-    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/cgv-nextjs/*\""
+    "deploy": "pnpm build && aws s3 sync --delete out s3://jbrowse.org/demos/cgv-nextjs/ && AWS_PAGER=\"\" aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/cgv-nextjs/*\""
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.9",
@@ -25,5 +23,6 @@
     "react-dom": "^19.2.3",
     "typescript": "^5.1.6"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "packageManager": "pnpm@11.18.0"
 }
