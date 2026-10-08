@@ -1,32 +1,17 @@
-# jbrowse-react-circular-genome-view-nextjs
+# Next.js with @jbrowse/react-circular-genome-view2
 
-This is a demo of using the circular genome view with next14 and the app router.
+`@jbrowse/react-circular-genome-view2` v5 (currently the `next` prerelease on npm) in a [Next.js](https://nextjs.org/) app router page, exported as a static site. The page is a client component.
 
-## Demo of `@jbrowse/react-circular-genome-view` with next.js
+See it running at https://jbrowse.org/demos/cgv-nextjs/.
 
-See this app running at https://jbrowse.org/demos/cgv-nextjs/.
-
-## Getting Started
-
-First, run the development server:
+## Usage
 
 ```bash
-npm run dev
-# or
+yarn
 yarn dev
 ```
 
-## Deploy
+`yarn build` writes a static site.
 
-This page is deployed to https://jbrowse.org/demos/cgv-nextjs (uses
-`output:export` in next.config.js to create static build with no server side)
-
-## Footnote
-
-Might not work with turbopack (which is next.js v16 default)
-
-Gives errors like:
-
-```
-Module [project]/node_modules/@mui/x-data-grid/index.css [app-client] (css) was instantiated because it was required from module [project]/node_modules/@mui/x-data-grid/DataGrid/index.js [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
-```
+More examples: https://jbrowse.org/storybook/, and the
+[embedding guide](https://jbrowse.org/jb2/docs/embedded_components/).
